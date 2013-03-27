@@ -393,11 +393,11 @@ class Client {
 }
 
 // Exceptions that the Google PHP API Library can throw
-class Exception extends Exception {}
-class AuthException extends Exception {}
-class CacheException extends Exception {}
-class IOException extends Exception {}
-class ServiceException extends Exception {
+class Exception extends \Exception {}
+class AuthException extends \Exception {}
+class CacheException extends \Exception {}
+class IOException extends \Exception {}
+class ServiceException extends \Exception {
   /**
    * Optional list of errors returned in a JSON body of an HTTP error response.
    */
