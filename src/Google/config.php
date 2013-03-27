@@ -38,9 +38,9 @@ $apiConfig = array(
     'site_name' => 'www.example.org',
 
     // Which Authentication, Storage and HTTP IO classes to use.
-    'authClass'    => 'Google_OAuth2',
-    'ioClass'      => 'Google_CurlIO',
-    'cacheClass'   => 'Google_FileCache',
+    'authClass'    => 'OAuth2',
+    'ioClass'      => 'CurlIO',
+    'cacheClass'   => 'FileCache',
 
     // Don't change these unless you're working against a special development or testing environment.
     'basePath' => 'https://www.googleapis.com',
@@ -49,8 +49,8 @@ $apiConfig = array(
     // for the class that was configured as the ioClass above
     'ioFileCache_directory'  =>
         (function_exists('sys_get_temp_dir') ?
-            sys_get_temp_dir() . '/Google_Client' :
-        '/tmp/Google_Client'),
+            sys_get_temp_dir() . '/Client' :
+        '/tmp/Client'),
 
     // Definition of service specific values like scopes, oauth token URLs, etc
     'services' => array(
