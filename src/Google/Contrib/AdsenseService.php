@@ -1,5 +1,10 @@
 <?php
+
 namespace Google\Contrib;
+
+use Google\Service\ServiceResource;
+use Google\Service\Service;
+use Google\Service\Model;
 
 /*
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
