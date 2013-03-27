@@ -110,7 +110,7 @@ class Model {
    */
   public function assertIsArray($obj, $type, $method) {
     if ($obj && !is_array($obj)) {
-      throw new Exception("Incorrect parameter type passed to $method(), expected an"
+      throw new \Exception("Incorrect parameter type passed to $method(), expected an"
           . " array containing items of type $type.");
     }
   }

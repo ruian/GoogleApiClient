@@ -20,15 +20,15 @@ namespace Google;
 // Check for the required json and curl extensions, the Google APIs PHP Client
 // won't function without them.
 if (! function_exists('curl_init')) {
-  throw new Exception('Google PHP API Client requires the CURL PHP extension');
+  throw new \Exception('Google PHP API Client requires the CURL PHP extension');
 }
 
 if (! function_exists('json_decode')) {
-  throw new Exception('Google PHP API Client requires the JSON PHP extension');
+  throw new \Exception('Google PHP API Client requires the JSON PHP extension');
 }
 
 if (! function_exists('http_build_query')) {
-  throw new Exception('Google PHP API Client requires http_build_query()');
+  throw new \Exception('Google PHP API Client requires http_build_query()');
 }
 
 if (! ini_get('date.timezone') && function_exists('date_default_timezone_set')) {
@@ -105,7 +105,7 @@ class Client {
   public function addService($service, $version = false) {
     global $apiConfig;
     if ($this->authenticated) {
-      throw new Exception('Cant add services after having authenticated');
+      throw new \Exception('Cant add services after having authenticated');
     }
     $this->services[$service] = array();
     if (isset($apiConfig['services'][$service])) {

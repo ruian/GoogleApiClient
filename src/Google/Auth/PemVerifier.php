@@ -35,7 +35,7 @@ class PemVerifier extends Verifier {
    */
   function __construct($pem) {
     if (!function_exists('openssl_x509_read')) {
-      throw new Exception('Google API PHP client needs the openssl PHP extension');
+      throw new \Exception('Google API PHP client needs the openssl PHP extension');
     }
     $this->publicKey = openssl_x509_read($pem);
     if (!$this->publicKey) {

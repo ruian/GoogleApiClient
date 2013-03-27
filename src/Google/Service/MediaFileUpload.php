@@ -264,6 +264,6 @@ class MediaFileUpload {
     if (200 == $code && true == $location) {
       return $location;
     }
-    throw new Exception("Failed to start the resumable upload");
+    throw new \Exception("Failed to start the resumable upload");
   }
 }

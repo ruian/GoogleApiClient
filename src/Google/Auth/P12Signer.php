@@ -31,7 +31,7 @@ class P12Signer extends Signer {
   // Creates a new signer from a .p12 file.
   function __construct($p12, $password) {
     if (!function_exists('openssl_x509_read')) {
-      throw new Exception(
+      throw new \Exception(
           'The Google PHP API library needs the openssl PHP extension');
     }
 

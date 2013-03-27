@@ -75,7 +75,7 @@ class ServiceResource {
    */
   public function __call($name, $arguments) {
     if (! isset($this->methods[$name])) {
-      throw new Exception("Unknown function: {$this->serviceName}->{$this->resourceName}->{$name}()");
+      throw new \Exception("Unknown function: {$this->serviceName}->{$this->resourceName}->{$name}()");
     }
     $method = $this->methods[$name];
     $parameters = $arguments[0];
@@ -115,13 +115,13 @@ class ServiceResource {
     $method['parameters'] = array_merge($method['parameters'], $this->stackParameters);
     foreach ($parameters as $key => $val) {
       if ($key != 'postBody' && ! isset($method['parameters'][$key])) {
-        throw new Exception("($name) unknown parameter: '$key'");
+        throw new \Exception("($name) unknown parameter: '$key'");
       }
     }
     if (isset($method['parameters'])) {
       foreach ($method['parameters'] as $paramName => $paramSpec) {
         if (isset($paramSpec['required']) && $paramSpec['required'] && ! isset($parameters[$paramName])) {
-          throw new Exception("($name) missing required param: '$paramName'");
+          throw new \Exception("($name) missing required param: '$paramName'");
         }
         if (isset($parameters[$paramName])) {
           $value = $parameters[$paramName];
