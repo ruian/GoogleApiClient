@@ -46,19 +46,6 @@ if (file_exists(dirname(__FILE__)  . '/local_config.php')) {
   $apiConfig = array_merge($defaultConfig, $apiConfig);
 }
 
-// Include the top level classes, they each include their own dependencies
-require_once 'service/Model.php';
-require_once 'service/Service.php';
-require_once 'service/ServiceResource.php';
-require_once 'auth/AssertionCredentials.php';
-require_once 'auth/Signer.php';
-require_once 'auth/P12Signer.php';
-require_once 'service/BatchRequest.php';
-require_once 'external/URITemplateParser.php';
-require_once 'auth/Auth.php';
-require_once 'cache/Cache.php';
-require_once 'io/IO.php';
-require_once('service/MediaFileUpload.php');
 
 /**
  * The Google API Client
