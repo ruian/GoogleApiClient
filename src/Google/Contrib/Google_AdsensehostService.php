@@ -1,8 +1,5 @@
 <?php
-<?php
-namespace Google\Contrib;
 
-namespace Google\Contrib;
 namespace Google\Contrib;
 
 /*
