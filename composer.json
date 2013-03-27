@@ -2,7 +2,7 @@
     "name": "ruian/google-api-client",
     "description": "A librairie to use google api with php",
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "Google": "src/" }
     },
     "require": {
         "php": ">=5.3.3"
