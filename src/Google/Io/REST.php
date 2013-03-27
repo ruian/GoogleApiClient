@@ -3,6 +3,7 @@ namespace Google\Io;
 
 use Google\Io\HttpRequest;
 use Google\Client;
+use Google\External\URITemplateParser;
 
 /*
  * Copyright 2010 Google Inc.
@@ -117,7 +118,7 @@ class REST {
     }
 
     if (count($uriTemplateVars)) {
-      $uriTemplateParser = new URI_Template_Parser($requestUrl);
+      $uriTemplateParser = new URITemplateParser($requestUrl);
       $requestUrl = $uriTemplateParser->expand($uriTemplateVars);
     }
     //FIXME work around for the the uri template lib which url encodes

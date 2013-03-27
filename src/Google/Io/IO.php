@@ -19,10 +19,6 @@ use Google\Io\HttpRequest;
  * limitations under the License.
  */
 
-require_once 'io/HttpRequest.php';
-require_once 'io/CurlIO.php';
-require_once 'io/REST.php';
-
 /**
  * Abstract IO class
  *

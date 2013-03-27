@@ -5,6 +5,7 @@ namespace Google\Contrib\Calendar;
 use Google\Service\ServiceResource;
 use Google\Service\Service;
 use Google\Service\Model;
+use Google\Client;
 
 /*
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not

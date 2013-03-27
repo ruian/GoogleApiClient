@@ -38,9 +38,9 @@ $apiConfig = array(
     'site_name' => 'www.example.org',
 
     // Which Authentication, Storage and HTTP IO classes to use.
-    'authClass'    => 'OAuth2',
-    'ioClass'      => 'CurlIO',
-    'cacheClass'   => 'FileCache',
+    'authClass'    => '\Google\Auth\OAuth2',
+    'ioClass'      => '\Google\Io\CurlIO',
+    'cacheClass'   => '\Google\Cache\FileCache',
 
     // Don't change these unless you're working against a special development or testing environment.
     'basePath' => 'https://www.googleapis.com',
